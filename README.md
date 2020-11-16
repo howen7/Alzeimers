@@ -1,5 +1,5 @@
 # Alzheimers
-classifying degrees of Alzheimers brain scans using CNN
+Classification using CNN
 
 
 # Using time series to Predict Future Home Values
