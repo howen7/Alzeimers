@@ -1,8 +1,4 @@
-# Alzheimers
-Classification using CNN
-
-
-# Using time series to Predict Future Home Values
+# Using CNN to Classify Alzheimers
 ![alt text](/notebooks/report/figures/readmepic1.jpg)
 
 # Table of Contents
