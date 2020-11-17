@@ -1,7 +1,3 @@
-# Alzheimers
-
-
-
 # Using CNN to Classify Alzheimers
 ![alt text](/notebooks/report/figures/readmepic1.jpg)
 
