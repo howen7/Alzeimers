@@ -132,5 +132,7 @@ dmypy.json
 # Pyre type checker
 .pyre/
 
+*.hdf5
+
 # Mac OS
 *.DS_Store
