@@ -29,9 +29,9 @@ def Vis_results(model,history, generator, samples, batch_size):
     Y_pred = model.predict_generator(generator, samples // batch_size +1) # so it lines up with the batches
     y_pred = np.argmax(Y_pred, axis=1)
     target_names = ['Mild','Moderate','None','Very Mild']
-    print('-----------------------Classification Report-------------------')
+    print('-----------------------Val Classification Report-------------------')
     print(classification_report(generator.classes, y_pred, target_names=target_names))
-    print('------------------------Confusion Matrix---------------------------')
+    print('------------------------Val Confusion Matrix---------------------------')
     conf = confusion_matrix(generator.classes, y_pred, normalize='true')
     ax = sns.heatmap(conf, annot=True, xticklabels = target_names, yticklabels= target_names);
     ax.set(xlabel='Predicted', ylabel='Actual')
@@ -48,4 +48,43 @@ def Vis_results(model,history, generator, samples, batch_size):
         ax[i].set_ylabel(j)
         ax[i].legend(['train', 'val'])
         
-    return y_pred
+    return
+
+def Vis_results_test(model,history, generator):
+    Y_pred = model.predict_generator(generator) # so it lines up with the batches
+    y_pred = np.argmax(Y_pred, axis=1)
+    target_names = ['Mild','Moderate','None','Very Mild']
+    print('-----------------------Test Classification Report-------------------')
+    print(classification_report(generator.classes, y_pred, target_names=target_names))
+    print('------------------------Test Confusion Matrix---------------------------')
+    conf = confusion_matrix(generator.classes, y_pred, normalize='true')
+    ax = sns.heatmap(conf, annot=True, xticklabels = target_names, yticklabels= target_names);
+    ax.set(xlabel='Predicted', ylabel='Actual')
+    plt.savefig(f'../report/figures/Confusion_matrix_test', dpi = 300)
+    
+    return y_pred, Y_pred
+
+def Vis_results2(model,history, generator, samples, batch_size):
+    Y_pred = model.predict_generator(generator, samples // batch_size +1) # so it lines up with the batches
+    y_pred = np.argmax(Y_pred, axis=1)
+    target_names = ['Mild','Moderate','None','Very Mild']
+    print('-----------------------Val Classification Report-------------------')
+    print(classification_report(generator.classes, y_pred, target_names=target_names))
+    print('------------------------Val Confusion Matrix---------------------------')
+    conf = confusion_matrix(generator.classes, y_pred, normalize='true')
+    ax = sns.heatmap(conf, annot=True, xticklabels = target_names, yticklabels= target_names);
+    ax.set(xlabel='Predicted', ylabel='Actual')
+    plt.savefig(f'../report/figures/Confusion_matrix_val', dpi = 300)
+    
+    fig, ax = plt.subplots(2, 1, figsize=(20, 10))
+    ax = ax.ravel()
+
+    for i, j in enumerate(['acc', 'loss']):
+        ax[i].plot(history[j])
+        ax[i].plot(history['val_' + j])
+        ax[i].set_title('Model {}'.format(j))
+        ax[i].set_xlabel('epochs')
+        ax[i].set_ylabel(j)
+        ax[i].legend(['train', 'val'])
+    plt.savefig(f'../report/figures/acc_loss', dpi = 300)
+    return
