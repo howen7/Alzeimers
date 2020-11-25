@@ -34,7 +34,9 @@ def Vis_results(model,history, generator, samples, batch_size):
     print('------------------------Val Confusion Matrix---------------------------')
     conf = confusion_matrix(generator.classes, y_pred, normalize='true')
     ax = sns.heatmap(conf, annot=True, xticklabels = target_names, yticklabels= target_names);
-    ax.set(xlabel='Predicted', ylabel='Actual')
+    ax.set_title('Test Confusion Matrix')
+    ax.set_xlabel('Predicted')
+    ax.set_ylabel('True')
     
     
     fig, ax = plt.subplots(1, 3, figsize=(20, 3))
@@ -56,13 +58,20 @@ def Vis_results_test(model,history, generator):
     target_names = ['Mild','Moderate','None','Very Mild']
     print('-----------------------Test Classification Report-------------------')
     print(classification_report(generator.classes, y_pred, target_names=target_names))
-    print('------------------------Test Confusion Matrix---------------------------')
+
+    fontdict = {'weight' : 'bold',
+            'size'   : 18}
     conf = confusion_matrix(generator.classes, y_pred, normalize='true')
     ax = sns.heatmap(conf, annot=True, xticklabels = target_names, yticklabels= target_names);
-    ax.set(xlabel='Predicted', ylabel='Actual')
+    ax.set_yticklabels(ax.get_yticklabels(), rotation = 0)
+    ax.set_title('Test Confusion Matrix', fontdict = fontdict)
+    ax.set_xlabel('Predicted', fontdict = fontdict)
+    ax.set_ylabel('True', fontdict = fontdict)
     plt.savefig(f'../report/figures/Confusion_matrix_test', dpi = 300)
     
     return y_pred, Y_pred
+
+
 
 def Vis_results2(model,history, generator, samples, batch_size):
     Y_pred = model.predict_generator(generator, samples // batch_size +1) # so it lines up with the batches
@@ -70,21 +79,26 @@ def Vis_results2(model,history, generator, samples, batch_size):
     target_names = ['Mild','Moderate','None','Very Mild']
     print('-----------------------Val Classification Report-------------------')
     print(classification_report(generator.classes, y_pred, target_names=target_names))
-    print('------------------------Val Confusion Matrix---------------------------')
+    fontdict = {'weight' : 'bold',
+            'size'   : 18}
     conf = confusion_matrix(generator.classes, y_pred, normalize='true')
     ax = sns.heatmap(conf, annot=True, xticklabels = target_names, yticklabels= target_names);
-    ax.set(xlabel='Predicted', ylabel='Actual')
+    ax.set_yticklabels(ax.get_yticklabels(), rotation = 0)
+    ax.set_title('Validation Confusion Matrix', fontdict = fontdict)
+    ax.set_xlabel('Predicted', fontdict = fontdict)
+    ax.set_ylabel('True', fontdict = fontdict)
     plt.savefig(f'../report/figures/Confusion_matrix_val', dpi = 300)
     
-    fig, ax = plt.subplots(2, 1, figsize=(20, 10))
+    fig, ax = plt.subplots(2, 1, figsize=(14, 10))
     ax = ax.ravel()
 
     for i, j in enumerate(['acc', 'loss']):
         ax[i].plot(history[j])
         ax[i].plot(history['val_' + j])
-        ax[i].set_title('Model {}'.format(j))
-        ax[i].set_xlabel('epochs')
-        ax[i].set_ylabel(j)
+        ax[i].set_title(f'Model {j.title()}',  fontdict = fontdict)
+        ax[i].set_xlabel('Epochs', fontdict = fontdict)
+        ax[i].set_ylabel(j.title(), fontdict = fontdict)
         ax[i].legend(['train', 'val'])
-    plt.savefig(f'../report/figures/acc_loss', dpi = 300)
+        fig.tight_layout()
+        plt.savefig(f'../report/figures/{j}', dpi = 300)
     return
