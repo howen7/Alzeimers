@@ -62,10 +62,10 @@
 
 ```
 #### Repo Navigation Links 
- - [Final summary notebook](https://github.com/howen7/Alzeimerstree/main/notebooks/report/final_notebook.ipynb)
+ - [Final summary notebook](https://github.com/howen7/Alzeimers/tree/main/notebooks/report/FinalNotebook.ipynb)
  - [Exploratory notebooks folder](https://github.com/howen7/Alzeimers/tree/main/notebooks/exploratory)
- - [src folder](https://github.com/howen7/Alzeimerstree/main/src)
- - [Presentation.pdf](https://github.com/howen7/Alzeimerstree/main/reports)
+ - [src folder](https://github.com/howen7/Alzeimers/tree/main/src)
+ - [Presentation.pdf](https://github.com/howen7/Alzeimers/tree/main/reports)
  
 # General Setup Instructions 
 
