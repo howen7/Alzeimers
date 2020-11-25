@@ -1,5 +1,5 @@
 # Using CNN to Classify Alzheimer's
-![alt text](/notebooks/report/figures/class_images.png)
+![alt text](/notebooks/report/figures/read_mepic.png)
 
 # Table of Contents
 
