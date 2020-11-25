@@ -1,5 +1,5 @@
 # Using CNN to Classify Alzheimer's
-![alt text](/notebooks/report/figures/class_images.png)
+![alt text](/notebooks/report/figures/read_mepic.png)
 
 # Table of Contents
 
@@ -77,7 +77,7 @@ This project relies on you using the [`environment.yml`](environment.yml) file t
 ```bash
 # create the alz-env conda environment
 conda env create -f environment.yml
-# activate the housing conda environment
+# activate the conda environment
 conda activate alz-env
 # if needed, make alz-env available to you as a kernel in jupyter
 python -m ipykernel install --user --name alz-env --display-name "Python 3 (alz-env)"
