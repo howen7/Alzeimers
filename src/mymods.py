@@ -67,6 +67,7 @@ def Vis_results_test(model,history, generator):
     ax.set_title('Test Confusion Matrix', fontdict = fontdict)
     ax.set_xlabel('Predicted', fontdict = fontdict)
     ax.set_ylabel('True', fontdict = fontdict)
+    plt.tight_layout()
     plt.savefig(f'../report/figures/Confusion_matrix_test', dpi = 300)
     
     return y_pred, Y_pred
@@ -93,8 +94,8 @@ def Vis_results2(model,history, generator, samples, batch_size):
     ax = ax.ravel()
 
     for i, j in enumerate(['acc', 'loss']):
-        ax[i].plot(history[j])
-        ax[i].plot(history['val_' + j])
+        ax[i].plot(history[j], color = 'k')
+        ax[i].plot(history['val_' + j], color = 'b')
         ax[i].set_title(f'Model {j.title()}',  fontdict = fontdict)
         ax[i].set_xlabel('Epochs', fontdict = fontdict)
         ax[i].set_ylabel(j.title(), fontdict = fontdict)
