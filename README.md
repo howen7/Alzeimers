@@ -118,7 +118,7 @@ Earlier iterations of models can be found in exploratory notebooks. I tried a va
 The CNN was able to classify with a very high accuracy and AUC and below are the results. 
 ![alt text](/notebooks/report/figures/Confusion_matrix_test.png)
 ![alt text](/notebooks/report/figures/acc.png)
-![alt text](/notebooks/report/figures/AUC.png)
+![alt text](/notebooks/report/figures/auc.png)
 ![alt text](/notebooks/report/figures/Lime_correct_preds.png)
 
 ### Best model: 6 Layer CNN
