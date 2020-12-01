@@ -53,12 +53,11 @@
 │   └──SlideDeck.pdf
 │   
 └── src
-    ├── data
+    ├── my_mods.py
     ├── best_weights_mod1.hdf5   
     ├── history_mod1.json
-    └──  mymods.py 
+    └── flask_apps
     
-
 ```
 #### Repo Navigation Links 
  - [Final summary notebook](https://github.com/howen7/Alzeimers/tree/main/notebooks/report/FinalNotebook.ipynb)
