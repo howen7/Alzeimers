@@ -108,6 +108,10 @@ Very Mild: 2240<br>
 Mild: 896<br>
 Moderate: 64<br>
 
+
+### Reproducibility
+To set up the data into train, validation, and test folders so you can repoduce my results go to [Import_data notebook](https://github.com/howen7/Alzeimers/tree/main/notebooks/exploratory/Import_data.ipynb) and run all the code.
+
 # Models used + Methodology:
 
 Earlier iterations of models can be found in exploratory notebooks. I tried a variety of models with test size (64,64), (128,128), and finally (178, 208). Using a size of (178,208) took longer to train, but would almost always have better results which is why I choose it. For the batch size I didn’t want too large of a batch size because they have a chance at getting stuck in local minimums and thus leads to poorer generalizations. I didn’t want to use too small of a batch size because the computational time was to significant. On the simpler models in my exploratory notebook I stuck to batch size less than 64, but once I started getting more advance models I used 64 and was able to achieve great results without the cost of extra computational time. For the imbalanced classes I decided to use class weights instead of data augmentation during my training as I was getting better results and not using a ton of extra computational time for data augmentation. The image was rescaled to normalize the pixels between 0 and 1. Several Learning rate
