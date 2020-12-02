@@ -8,7 +8,7 @@
  * [Context of Project](https://github.com/howen7/Alzeimers#Context)
  * [Data](https://github.com/howen7/Alzeimers#Data)
  * [Process](https://github.com/howen7/Alzeimers#models-used--methodology)
- * [Results & next steps](https://github.com/howen7/Alzeimers#Results)
+ * [Results & Next Steps](https://github.com/howen7/Alzeimers#Results)
 <!--te-->
 
 ```
