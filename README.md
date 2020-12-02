@@ -57,7 +57,14 @@
     ├── best_weights_mod1.hdf5   
     ├── history_mod1.json
     └── flask_apps
-    
+        ├──Static
+        │   └──upload.js
+        ├──Templates
+        │   ├──pred.html
+        │   └──upload.html
+        ├──uploaded
+        ├──best_weights_mod1.hdf5
+        └──Code.py
 ```
 #### Repo Navigation Links 
  - [Final summary notebook](https://github.com/howen7/Alzeimers/tree/main/notebooks/report/FinalNotebook.ipynb)
@@ -107,6 +114,8 @@ Very Mild: 2240<br>
 Mild: 896<br>
 Moderate: 64<br>
 
+Areas of focus that doctors look at when diagnosing patients<br>
+![alt text](/notebooks/report/figures/brain2.jpg)
 
 ### Reproducibility
 To set up the data into train, validation, and test folders so you can repoduce my results go to [Import_data notebook](https://github.com/howen7/Alzeimers/tree/main/notebooks/exploratory/Import_data.ipynb) and run all the code.
