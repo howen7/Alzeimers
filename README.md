@@ -57,14 +57,14 @@
     ├── best_weights_mod1.hdf5   
     ├── history_mod1.json
     └── flask_apps
-        ├──Static
-        │   └──upload.js
-        ├──Templates
-        │   ├──pred.html
-        │   └──upload.html
-        ├──uploaded
-        ├──best_weights_mod1.hdf5
-        └──Code.py
+        ├──static
+        │   └──bootstrap.min.css
+        ├──templates
+        │   ├──home.html
+        ├──uploads
+        ├──model
+        │   └──best_weights_mod1.hdf5
+        └──application.py
 ```
 #### Repo Navigation Links 
  - [Final summary notebook](https://github.com/howen7/Alzeimers/tree/main/notebooks/report/FinalNotebook.ipynb)
