@@ -8,7 +8,7 @@
  * [Context of Project](https://github.com/howen7/Alzeimers#Context)
  * [Definitions](https://github.com/howen7/Alzeimersw#Definitions)
  * [Data](https://github.com/howen7/Alzeimers#Data)
- * [Process](https://github.com/howen7/Alzeimersmodels-used--methodology)
+ * [Process](https://github.com/howen7/Alzeimers#models-used--methodology)
  * [Results](https://github.com/howen7/Alzeimers#Results)
  * [Next Steps](https://github.com/howen7/Alzeimers#Future-Investigations-and-Recommendations)
 <!--te-->
