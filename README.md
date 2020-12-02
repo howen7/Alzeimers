@@ -6,7 +6,6 @@
 <!--ts-->
  * [General Setup Instructions](https://github.com/howen7/Alzeimers#general-setup-instructions)
  * [Context of Project](https://github.com/howen7/Alzeimers#Context)
- * [Definitions](https://github.com/howen7/Alzeimersw#Definitions)
  * [Data](https://github.com/howen7/Alzeimers#Data)
  * [Process](https://github.com/howen7/Alzeimers#models-used--methodology)
  * [Results](https://github.com/howen7/Alzeimers#Results)
