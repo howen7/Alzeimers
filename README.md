@@ -131,7 +131,7 @@ The CNN was able to classify with a very high accuracy and AUC and below are the
 ![alt text](/notebooks/report/figures/auc.png)
 ![alt text](/notebooks/report/figures/Lime_correct_preds.png)
 
-### Best model: 6 Layer CNN
+### Best model: 7 Layer CNN
 
 ![alt text](/notebooks/report/figures/ModelSummary.png)
 
